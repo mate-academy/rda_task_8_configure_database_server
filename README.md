@@ -15,12 +15,12 @@ Custom database configuration might be useful if you need to fine-tune your serv
 In this task, you will need to update your database configuration on the virtual machine you prepared during the lab setup: 
 - Copy the configuration file from your database server to the file `task.cnf` in this repository
 - Update the configuration according to the requirements 
-- To test if configuration is correct - build a docker image using the Dockerfile in this repository and start the container from that image. To build the image and star the contianer, use the following commands (run them in the repository folder): 
-`
-docker build -t mysql-test:latest . 
-docker run --name mysql -e MYSQL_ROOT_PASSWORD=P@ssw0rd -d mysql-test:latest
-docker logs -f mysql
-`
+- To test if configuration is correct - build a docker image using the Dockerfile in this repository and start the container from that image. To build the image and start the contianer, use the following commands (run them in the repository folder): 
+    ```
+    docker build -t mysql-test:latest . 
+    docker run --name mysql -e MYSQL_ROOT_PASSWORD=P@ssw0rd -d mysql-test:latest
+    docker logs -f mysql
+    ```
 - If the database service isn't starting - troubleshoot the issue by checking the the container log. 
 - Once configuration is ready, copy it's content to the file `task.cnf` in this repository and submit the PR for a review.
 
