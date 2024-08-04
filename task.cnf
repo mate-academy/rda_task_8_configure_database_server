@@ -1,0 +1,15 @@
+#
+# The MySQL database client configuration file
+#
+# Ref to https://dev.mysql.com/doc/refman/en/mysql-command-options.html
+
+[mysql]
+
+[mysqld]
+user = root
+port = 3000
+datadir = /data
+slow_query_log = 1
+slow_query_log_file = /data/mysql-slow.log
+
+bind-address = 0.0.0.0
