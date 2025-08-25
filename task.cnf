@@ -1,0 +1,20 @@
+[mysqld]
+# Custom MySQL configuration for task requirements
+
+# System user for database service
+user = root
+
+# Custom TCP port
+port = 3000
+
+# Custom data directory
+datadir = /data
+
+# Enable slow query logging
+slow_query_log = 1
+
+# Path to slow query log file
+slow_query_log_file = /data/mysql-slow.log
+
+# Error log path (commented as per requirements)
+# log-error = /var/log/mysql/error.log
