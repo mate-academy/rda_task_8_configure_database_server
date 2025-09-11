@@ -1,0 +1,21 @@
+[mysqld]
+# Змінюємо системного користувача, під яким працює сервіс
+user = root
+
+# Змінюємо TCP-порт
+port = 3000
+
+# Змінюємо директорію для зберігання даних
+datadir = /data
+
+# Увімкнення логування повільних запитів
+slow_query_log = 1
+
+# Шлях до файлу логу повільних запитів
+slow_query_log_file = /data/mysql-slow.log
+
+# skip-networking  # (залишаємо закоментованим, якщо не потрібно)
+# bind-address = 127.0.0.1  # (залишаємо або змінюємо за потреби)
+
+# log_error = /var/log/mysql/error.log  ← Цей рядок треба закоментувати
+#log_error = /var/log/mysql/error.log
