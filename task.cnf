@@ -1,0 +1,18 @@
+[mysqld]
+# 1) Run mysqld as root (task requirement)
+user = root
+
+# 2) Listen on custom TCP port
+port = 3000
+
+# 3) Store MySQL data under /data
+datadir = /data
+
+# 4) Enable slow query logging
+slow_query_log = 1
+
+# 5) Slow query log file location
+slow_query_log_file = /data/mysql-slow.log
+
+# 6) Error log path must be commented out (task requirement)
+# log_error = /var/log/mysql/error.log
