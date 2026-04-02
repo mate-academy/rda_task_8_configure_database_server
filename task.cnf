@@ -1,0 +1,11 @@
+[mysqld]
+socket=/var/lib/mysql/mysql.sock
+#log-error=/var/log/mysql/mysqld.log
+pid-file=/run/mysqld/mysqld.pid
+
+bind-address = 0.0.0.0
+port = 3000
+user = root
+datadir = /data
+slow_query_log = 1
+slow_query_log_file = /data/mysql-slow.log
