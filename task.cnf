@@ -1,0 +1,17 @@
+[mysqld]
+
+# Run mysqld as root user
+user = root
+
+# Change TCP port
+port = 3000
+
+# Change data directory
+datadir = /data
+
+# Enable slow query log
+slow_query_log = 1
+slow_query_log_file = /data/mysql-slow.log
+
+# Comment error log path
+# log_error = /var/log/mysql/error.log
