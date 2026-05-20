@@ -1,0 +1,7 @@
+[mysqld]
+user=root
+port=3000
+datadir=/data
+slow_query_log=1
+slow_query_log_file=/data/mysql-slow.log
+#error_log=/data/mysql-error.log
