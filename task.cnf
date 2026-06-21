@@ -15,11 +15,11 @@
 #
 # * Basic Settings
 #
-user		= mysql
+user		= root
 # pid-file	= /var/run/mysqld/mysqld.pid
 # socket	= /var/run/mysqld/mysqld.sock
-# port		= 3306
-# datadir	= /var/lib/mysql
+port		= 3000
+datadir	= /data
 
 
 # If MySQL is running as a replication slave, this should be
@@ -59,11 +59,11 @@ myisam-recover-options  = BACKUP
 #
 # Error log - should be very few entries.
 #
-log_error = /var/log/mysql/error.log
+#log_error = /var/log/mysql/error.log
 #
 # Here you can see queries with especially long duration
-# slow_query_log		= 1
-# slow_query_log_file	= /var/log/mysql/mysql-slow.log
+slow_query_log		= 1
+slow_query_log_file	= /data/mysql-slow.log
 # long_query_time = 2
 # log-queries-not-using-indexes
 #
