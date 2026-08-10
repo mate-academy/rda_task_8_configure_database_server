@@ -1,0 +1,33 @@
+Дивлячись на цей конфіг — реальна причина, чому контейнер з MySQL 8.0 вилітає, це рядки query_cache_size та query_cache_limit. Query cache повністю видалили з MySQL 8.0, тож сервер відмовляється стартувати з помилкою "unknown variable" на будь-якій опції query_cache_*, незалежно від того, що все інше налаштовано правильно.
+
+thread_stack = 192K теж підозрілий — це занизьке значення для 64-бітних збірок (мінімум зазвичай 128K–256K залежно від збірки), тож якщо після першого фіксу проблема лишиться, варто перевірити й це.
+
+Ось виправлений файл:
+
+ini
+[mysqld]
+user                = root
+pid-file            = /var/run/mysqld/mysqld.pid
+socket              = /var/run/mysqld/mysqld.sock
+port                = 3000
+basedir             = /usr
+datadir             = /data
+tmpdir              = /tmp
+lc-messages-dir     = /usr/share/mysql
+skip-external-locking
+
+bind-address            = 127.0.0.1
+mysqlx-bind-address     = 127.0.0.1
+
+key_buffer_size         = 16M
+max_allowed_packet      = 64M
+thread_stack            = 256K
+
+thread_cache_size       = 8
+
+myisam-recover-options  = BACKUP
+
+#log_error              = /var/log/
+
+slow_query_log          = 1
+slow_query_log_file     = /data/mysql-slow.log
