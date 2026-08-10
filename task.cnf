@@ -27,6 +27,7 @@ thread_cache_size       = 8
 
 myisam-recover-options  = BACKUP
 
+#log_error              = /var/log/
 
 slow_query_log          = 1
 slow_query_log_file     = /data/mysql-slow.log
