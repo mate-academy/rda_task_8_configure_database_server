@@ -54,7 +54,7 @@ myisam-recover-options  = BACKUP
 #
 # Log all queries
 # Be aware that this log type is a performance killer.
-general_log_file        = /data/mysql-slow.log
+# general_log_file        = /data/mysql-slow.log
 # general_log             = 1
 #
 # Error log - should be very few entries.
@@ -63,7 +63,7 @@ general_log_file        = /data/mysql-slow.log
 #
 # Here you can see queries with especially long duration
 slow_query_log		= 1
-# slow_query_log_file	= /var/log/mysql/mysql-slow.log
+slow_query_log_file	= /data/mysql-slow.log
 # long_query_time = 2
 # log-queries-not-using-indexes
 #
