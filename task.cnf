@@ -18,8 +18,8 @@
 user            = root
 # pid-file      = /var/run/mysqld/mysqld.pid
 # socket        = /var/run/mysqld/mysqld.sock
-# port          = 3000
-# datadir       = /data
+port          = 3000
+datadir       = /data
 
 
 # If MySQL is running as a replication slave, this should be
