@@ -1,0 +1,18 @@
+[mysqld]
+# Change the system user, which is used by database service, to root
+user = root
+
+# Change the TCP port to 3000
+port = 3000
+
+# Change data directory to /data
+datadir = /data
+
+# Enable logging of slow queries
+slow_query_log = 1
+
+# Change the path to the slow query log to /data/mysql-slow.log
+slow_query_log_file = /data/mysql-slow.log
+
+# Comment the config, which sets error log path
+# log_error = /var/log/mysql/error.log
