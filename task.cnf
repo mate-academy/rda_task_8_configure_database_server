@@ -1,0 +1,12 @@
+[mysqld]
+user = root
+port = 3000
+datadir = /data
+bind-address = 0.0.0.0
+mysqlx-bind-address = 127.0.0.1
+key_buffer_size = 16M
+myisam-recover-options = BACKUP
+slow_query_log = 1
+slow_query_log_file = /data/mysql-slow.log
+# log_error = /var/log/mysql/error.log
+max_binlog_size = 100M
